@@ -40,6 +40,7 @@ var Quiz = {
         $('.questions').html(''); //clear question
         $('.choices').html(''); //clear answers
         $('.correct-answers').html(''); //clear correct answers
+        $('.next-button').text('Next Question').removeClass('btn-success');
         if (this.count < allQuestions.length) {
             var question = allQuestions[this.count].question;
             var id = 1;
@@ -53,9 +54,9 @@ var Quiz = {
                 id++;
             });
         } else {
-           $('.correct-answers').html(this.correctAnswerCount + '/' + allQuestions.length + ' answered correctly!');
-           $('.next-button').text('Start Over');
-            this.count = 0;
+           $('.correct-answers').html(this.correctAnswerCount + ' / ' + allQuestions.length + ' answered correctly!');
+           $('.next-button').text('Start Over').addClass('btn-success');
+           this.count = 0;
         }
     },
 
