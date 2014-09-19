@@ -55,6 +55,7 @@ var Quiz = {
             $('.correct-answers').html(this.correctAnswerCount + ' / ' + allQuestions.length + ' answered correctly!');
             $('.next-button').text('Start Over').addClass('btn-success');
             this.count = 0;
+            this.correctAnswerCount = 0;
         }
     },
 
