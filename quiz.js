@@ -1,5 +1,3 @@
-'use strict';
-
 var allQuestions = [{
     question: "Who is Prime Minister of the United Kingdom?",
     choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"],
@@ -54,9 +52,9 @@ var Quiz = {
                 id++;
             });
         } else {
-           $('.correct-answers').html(this.correctAnswerCount + ' / ' + allQuestions.length + ' answered correctly!');
-           $('.next-button').text('Start Over').addClass('btn-success');
-           this.count = 0;
+            $('.correct-answers').html(this.correctAnswerCount + ' / ' + allQuestions.length + ' answered correctly!');
+            $('.next-button').text('Start Over').addClass('btn-success');
+            this.count = 0;
         }
     },
 
@@ -66,10 +64,7 @@ var Quiz = {
         this.count += 1;
     }
 
-
-
 };
-
 
 $(function() {
     //show first question
@@ -81,5 +76,4 @@ $(function() {
         Quiz.checkAnswer(answer);
         Quiz.showQuestion();
     });
-
 });
